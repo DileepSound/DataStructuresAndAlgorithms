@@ -1,0 +1,30 @@
+package com.saveforgreen.datastructures.problem.linkedlist;
+
+import com.saveforgreen.datastructures.vo.ListNode;
+
+public class FindMiddleNodeSLL {
+
+	public static void main(String[] args) {
+
+		ListNode param = new ListNode(1);
+		param.head = param;
+		int i = 2;
+		while (i < 5) {
+			param.next = new ListNode(i);
+			param = param.next;
+			i++;
+		}
+		System.out.println("Answer = " + param.head);
+
+	}
+
+	public static ListNode middleNode(ListNode head) {
+		ListNode slow = head;
+		ListNode fast = head;
+		while (fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		return slow;
+	}
+}
