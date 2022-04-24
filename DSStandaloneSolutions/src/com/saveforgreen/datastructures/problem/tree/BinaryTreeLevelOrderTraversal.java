@@ -12,12 +12,12 @@ public class BinaryTreeLevelOrderTraversal {
 		// TODO Auto-generated method stub
 
 	}
-	
+
     public static List<List<Integer>> levelOrder(TreeNode root) {
-    	
-    	List<List<Integer>> result = new ArrayList<List<Integer>>();
+
+    	List<List<Integer>> result = new ArrayList<>();
     	TreeNode currentNode = root;
-    	
+
     	while (currentNode.left != null || currentNode.right != null) {
     		if (currentNode.left != null) {
     			//result.add(currentNode.left.val);
@@ -26,11 +26,11 @@ public class BinaryTreeLevelOrderTraversal {
     		if (currentNode.right != null) {
     			levelOrder(currentNode.right);
     		}
-    		
+
     	}
-    	
-    	return result;        
-    }	
+
+    	return result;
+    }
 
 }
 

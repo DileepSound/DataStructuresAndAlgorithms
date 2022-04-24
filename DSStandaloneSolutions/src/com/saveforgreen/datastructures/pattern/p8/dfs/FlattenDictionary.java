@@ -1,4 +1,4 @@
-package com.dsandalgo.pattern.p8.dfs;
+package com.saveforgreen.datastructures.pattern.p8.dfs;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 public class FlattenDictionary {
 
 	static HashMap<String, String> flattenDictionary(HashMap<String, Object> dict) {
-		HashMap<String, String> output = new HashMap<String, String>();
+		HashMap<String, String> output = new HashMap<>();
 		// your code goes here
 		// Map.Entry<String, Object> entry : dict.entrySet()
 		flattenDictHelper(dict, output, "");
@@ -59,7 +59,7 @@ public class FlattenDictionary {
 /*
  * dict = { "Key1" : "1", "Key2" : { "a" : "2", "b" : "3", "c" : { "d" : "3",
  * "e" : { "" : "1" } } } } { ""
- * 
+ *
  * }
- * 
+ *
  */

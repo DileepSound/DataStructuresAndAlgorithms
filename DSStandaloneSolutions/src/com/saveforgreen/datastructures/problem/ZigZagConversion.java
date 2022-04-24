@@ -8,11 +8,11 @@ public class ZigZagConversion {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(convert("paypalishiring", 3));
-		
+
 		System.out.println(convert2("paypalishiring", 3));
 
 	}
-	
+
 	public static String convert(String s, int numRows) {
 
         if (numRows == 1) return s;
@@ -37,7 +37,7 @@ public class ZigZagConversion {
         }
         return ret.toString();
     }
-	
+
 	public static String convert2(String s, int numRows) {
 
         if (numRows == 1) return s;

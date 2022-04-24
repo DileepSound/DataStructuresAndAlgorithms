@@ -5,8 +5,8 @@ public class ProductOfAllOtherNumbersInArray {
 	public static void main(String[] args) {
 		int[] input = new int[] { 1, 3, 5 };
 		int[] result = productOfOtherNumbers(input);
-		for (int i = 0; i < result.length; i++) {
-			System.out.print(result[i] + ", ");
+		for (int element : result) {
+			System.out.print(element + ", ");
 		}
 
 	}

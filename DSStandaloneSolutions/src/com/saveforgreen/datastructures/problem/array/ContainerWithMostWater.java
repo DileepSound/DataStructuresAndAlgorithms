@@ -6,14 +6,14 @@ public class ContainerWithMostWater {
 //      System.out.print("Input: height = ");
 //      String input = in.nextLine();
 //      in.close();
-     
+
 //      int[] height = Arrays.stream(input.split(",")).mapToInt(Integer::parseInt).toArray();
      int[] height = new int[] {1,8,6,2,5,4,8,3,7};
      ContainerWithMostWater s = new ContainerWithMostWater();
-     System.out.println("Öutput: " +  s.maxArea(height));
- 
+     System.out.println("ï¿½utput: " +  s.maxArea(height));
+
  }
- 
+
  public int maxArea(int[] height) {
      int currentIndex = 0, nextIndex = 1;
      int interval = 0;
@@ -22,7 +22,7 @@ public class ContainerWithMostWater {
          interval = nextIndex - currentIndex;
          area = Math.min(height[currentIndex], height[nextIndex]) * interval;
          if (area > maxArea) {
-          maxArea = area;         
+          maxArea = area;
          }
          nextIndex++;
          currentIndex++;

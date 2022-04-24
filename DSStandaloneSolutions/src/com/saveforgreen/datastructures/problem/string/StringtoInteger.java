@@ -30,11 +30,11 @@ public class StringtoInteger {
 			if ("1234567890".contains(nextChar+"")) {
 				int nextNum = Integer.parseInt(String.valueOf(nextChar));
 				// -214748364#8
-				if (isNegative && 
-						((result * -1) < Math.abs(Integer.MIN_VALUE)/10 || 
+				if (isNegative &&
+						((result * -1) < Math.abs(Integer.MIN_VALUE)/10 ||
 								(((result * -1) == Math.abs(Integer.MIN_VALUE)/10) && (nextNum * -1) <= (Math.abs(Integer.MIN_VALUE)%10)))) {
 					return Integer.MIN_VALUE;
-				} else if (result > Integer.MAX_VALUE/10 || 
+				} else if (result > Integer.MAX_VALUE/10 ||
 						(result == Integer.MAX_VALUE/10 && nextNum > Integer.MAX_VALUE%10)) {
 					return Integer.MAX_VALUE;
 

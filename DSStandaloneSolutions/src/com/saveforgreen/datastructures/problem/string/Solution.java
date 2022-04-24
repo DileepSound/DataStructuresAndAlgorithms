@@ -14,15 +14,15 @@ class Solution {
            || isPanlindrome(s)) {
             return s;
         }
-        
+
         //1. iterate through the string s from left to right
         int endIndex = s.length() - 1;
         int i = 0;
         System.out.println("endIndex = " + endIndex);
         while (i < s.length()) {
         //2. if character on the left matches character on the right call palindrome function
-            if (i >= 0 && endIndex > 0 
-                && (s.charAt(i) == s.charAt(endIndex-1)) 
+            if (i >= 0 && endIndex > 0
+                && (s.charAt(i) == s.charAt(endIndex-1))
                 && isPanlindrome(s.substring(i, endIndex))) {
 
                 i++;
@@ -33,8 +33,8 @@ class Solution {
             } else {
                 endIndex = endIndex - 1;
             }
-        }            
-        
+        }
+
         //4. find the longest list
         if (palindromelist.size() > 0) {
             int longestIndex = 0;
@@ -50,10 +50,10 @@ class Solution {
             result = palindromelist.get(longestIndex);
         } else {
             result = s.substring(0, 1);
-        }        
+        }
         return result;
     }
-    
+
     private static boolean isPanlindrome(String substr) {
         //3. if true store it in the palindrome list
         if (substr != null && substr.length() > 1) {
@@ -63,14 +63,14 @@ class Solution {
             } else {
                 return false;
             }
-        }    
+        }
         return false;
-    } 
-    
-    public static void main(String[] args) {
-    	
-    System.out.println("Answer = " + longestPalindrome("kamalahaasan"));
-    
     }
-    
+
+    public static void main(String[] args) {
+
+    System.out.println("Answer = " + longestPalindrome("kamalahaasan"));
+
+    }
+
 }

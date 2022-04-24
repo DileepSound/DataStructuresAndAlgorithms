@@ -1,4 +1,4 @@
-package com.dsandalgo.pattern.p2.twopointers;
+package com.saveforgreen.datastructures.pattern.p2.twopointers;
 
 import java.util.Arrays;
 

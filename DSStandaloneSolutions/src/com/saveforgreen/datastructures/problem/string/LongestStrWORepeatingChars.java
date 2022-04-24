@@ -15,23 +15,23 @@ public class LongestStrWORepeatingChars {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(lengthOfLongestSubstring("aaajsdjksjhssskjhdfslkkkk"));
-		
+
 		System.out.println(lengthOfLongestSubstringMoreEfficient("aaajsdjksjhssskjhdfslkkkk"));
 	}
 
 	public static int lengthOfLongestSubstring(String s) {
         // form a string that is of unique characters stop when a character repeats
-        
+
 		int maxSubstrLen = 0;
         int index = 0;
-        Map<Integer, String> substrTracker = new HashMap<Integer, String>();
-        substrTracker.put(index, new String(""));    
-        
+        Map<Integer, String> substrTracker = new HashMap<>();
+        substrTracker.put(index, new String(""));
+
         for (int i = 0; i < s.length(); i++) {
         	// append characters until a character repeats
             if (!substrTracker.get(index).contains(s.charAt(i)+"")) {
                 substrTracker.put(index, (substrTracker.get(index) + s.charAt(i)));
-            
+
                 if (i == s.length()-1) {
                 	maxSubstrLen = (maxSubstrLen > substrTracker.get(index).length()) ? maxSubstrLen : substrTracker.get(index).length();
                 }
@@ -42,10 +42,10 @@ public class LongestStrWORepeatingChars {
                 i = ++index;
                 substrTracker.put(index, new String(s.charAt(i)+""));
             }
-        }        
+        }
         return maxSubstrLen;
     }
-	
+
 	/** Efficient !!!! **/
 	public static int lengthOfLongestSubstringEfficient(String s) {
         int n = s.length();
@@ -63,7 +63,7 @@ public class LongestStrWORepeatingChars {
         }
         return ans;
     }
-	
+
 	/** Even more Efficient !!!! **/
 	public static int lengthOfLongestSubstringMoreEfficient(String s) {
         int n = s.length(), ans = 0;

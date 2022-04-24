@@ -12,7 +12,7 @@ public class ClosestSumPair {
         int aTarget = 24;
         result = closestSumPair(a1, a2, aTarget);// should return {5, 20} or {3, 20}
         System.out.println("Result = " + result[0] + " : " + result[1]);
-        
+
         int[] b1 = {7, 4, 1, 10};
         int[] b2 = {4, 5, 8, 7};
         int bTarget = 13;
@@ -28,7 +28,7 @@ public class ClosestSumPair {
         int dTarget = -15;
         // closestSumPair(d1, d2, dTarget) should return {-16, 2}, {-9, -7}
 	}
-	
+
 	// a1 and a2 are the given arrays, and target is the target sum.
     // It should return an array of two numbers as the result,
     // one from each array.

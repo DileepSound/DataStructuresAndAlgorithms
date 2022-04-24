@@ -18,7 +18,7 @@ public class SumofTwoNumberInArray {
             System.out.println("twoSumBigOofNsq - restult =  {" + result[0] + "," + result[1] + "}");
             System.out.println("twoSumBigOofNsq = " + ((System.nanoTime() - startTimeinMillis)/1000) );
         }
-        
+
         startTimeinMillis = System.nanoTime();
         result = solution.twoSumBigOofN(nums, target);
         if (result != null) {
@@ -29,21 +29,21 @@ public class SumofTwoNumberInArray {
         	System.err.print(e.getMessage());
         }
     }
-	// O(n2) Time complexity, O(1) Space complexity 
+	// O(n2) Time complexity, O(1) Space complexity
 	public int[] twoSumBigOofNsq(int[] sortedNums, int target) {
         for (int i= 0; i < sortedNums.length; i++) {
             for (int j = i+1; j < sortedNums.length; j++) {
                 if (sortedNums[i] + sortedNums[j] == target) {
-                   return new int[]{i, j};                     
+                   return new int[]{i, j};
                 }
             }
         }
         throw new IllegalArgumentException("No two sum solution");
     }
-	
+
 	// O(n) Time complexity, O(n) Space complexity
 	public int[] twoSumBigOofN(int[] nums, int target) {
-		
+
 		 Map<Integer, Integer> map = new HashMap<>();
 		    for (int i = 0; i < nums.length; i++) {
 		        map.put(nums[i], i);
@@ -56,5 +56,5 @@ public class SumofTwoNumberInArray {
 		    }
 		    throw new IllegalArgumentException("No two sum solution");
 	}
-	
+
 }

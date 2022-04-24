@@ -1,8 +1,5 @@
 package com.saveforgreen.datastructures.problem.string;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 public class LongestPalindromicSubstring {
 
 	public static void main(String[] args) {

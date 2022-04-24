@@ -1,4 +1,4 @@
-package com.dsandalgo.pattern.p1.slidingwindow;
+package com.saveforgreen.datastructures.pattern.p1.slidingwindow;
 
 import java.util.Arrays;
 
@@ -10,7 +10,7 @@ public class SlidingWindowFindAvgofKSubElements {
         int k = 5;
         System.out.println(Arrays.toString(findAveragesOofn(k, input)));
     }
-    
+
     public static double[] findAveragesOofn2(int k, int[] arr) {
         int left = 0, right = left + k -1;
         double[] result = new double[arr.length-k+1];
@@ -25,7 +25,7 @@ public class SlidingWindowFindAvgofKSubElements {
         }
         return result;
     }
-    
+
     public static double[] findAveragesOofn(int k, int[] arr) {
         int left = 0, right = left + k -1;
         double[] result = new double[arr.length-k+1];
@@ -36,7 +36,7 @@ public class SlidingWindowFindAvgofKSubElements {
         result[left] = sum[left]/k;
         left++;
         right++;
-        
+
         while (right < arr.length) {
             sum[left] = findNextSum(arr, sum[left-1], left-1, right);
             result[left] = sum[left]/k;
@@ -45,7 +45,7 @@ public class SlidingWindowFindAvgofKSubElements {
         }
         return result;
     }
-    
+
     public static double findNextSum(int[] arr, double prevSum, int subtractidx, int addidx) {
         double nextSum = prevSum - arr[subtractidx] + arr[addidx];
         return nextSum;

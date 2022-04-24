@@ -1,7 +1,8 @@
 package com.saveforgreen.datastructures.problem.number;
 
-import java.util.*;
-import java.lang.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class PrimeGenerator {
 
@@ -22,7 +23,7 @@ public class PrimeGenerator {
 
 		Scanner in = new Scanner(System.in);
 		int noOfTestcases = in.nextInt();
-		List<String> listOfTestcases = new ArrayList<String>();
+		List<String> listOfTestcases = new ArrayList<>();
 		int index = 0;
 		while (in.hasNextLine()) {
 

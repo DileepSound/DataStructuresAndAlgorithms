@@ -10,12 +10,12 @@ public class KthSmallestSortedMatrix {
 		System.out.println(kthSmallest(input, 6));
 
 	}
-	
+
     public static int kthSmallest(int[][] matrix, int k) {
         int result = 0;
-        
+
         int len = matrix[0].length;
-        
+
         //List<Integer> mergedList = new ArrayList<Integer>();
         int[] mergedList = new int[len * len];
         int mergedListIdx= 0;
@@ -23,12 +23,12 @@ public class KthSmallestSortedMatrix {
             for (int j = 0; j< len; j++) {
                 mergedList[mergedListIdx++] = matrix[i][j];
                 //System.out.println(mergedList[mergedListIdx] + ", ");
-            }             
+            }
         }
         Arrays.sort(mergedList);
         result = mergedList[k-1];
         return result;
     }
 
-	
+
 }

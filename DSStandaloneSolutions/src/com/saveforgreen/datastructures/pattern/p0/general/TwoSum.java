@@ -1,4 +1,4 @@
-package com.dsandalgo.pattern.p0.general;
+package com.saveforgreen.datastructures.pattern.p0.general;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,10 +17,10 @@ public class TwoSum {
 	            int compVal = target - nums[i];
 	            if (!tempMap.containsKey(compVal)) {
 	                tempMap.put(nums[i], tempMapIdx++);
-	            } else {    
+	            } else {
 	                return new int[] {i, tempMap.get(compVal)};
 	            }
 	        }
-	        return null;           
+	        return null;
 	    }
 	}

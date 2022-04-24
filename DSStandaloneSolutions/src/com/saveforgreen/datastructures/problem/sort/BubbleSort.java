@@ -9,6 +9,6 @@ public class BubbleSort {
 
 	private static void bubbleSort() {
 		StringBuilder str = new StringBuilder("-123");
-		System.out.println(Integer.MAX_VALUE + " : " + Integer.MIN_VALUE);		
+		System.out.println(Integer.MAX_VALUE + " : " + Integer.MIN_VALUE);
 	}
 }

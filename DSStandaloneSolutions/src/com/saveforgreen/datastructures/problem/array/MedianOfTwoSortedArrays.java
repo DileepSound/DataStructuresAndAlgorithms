@@ -1,9 +1,6 @@
 package com.saveforgreen.datastructures.problem.array;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public class MedianOfTwoSortedArrays {
 
@@ -25,11 +22,11 @@ public class MedianOfTwoSortedArrays {
         Arrays.sort(arrayList);
         int len = arrayList.length;
         System.out.println(len);
-        
+
         if (len % 2 != 0) {
         	return arrayList[len/2];
-        }        
-        System.out.println();        
-        return (double)(arrayList[(len - 1) / 2] + arrayList[len / 2]) / 2.0;
+        }
+        System.out.println();
+        return (arrayList[(len - 1) / 2] + arrayList[len / 2]) / 2.0;
     }
 }

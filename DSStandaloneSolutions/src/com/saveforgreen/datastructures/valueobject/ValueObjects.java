@@ -1,4 +1,4 @@
-package com.dsandalgo.pattern.valueobject;
+package com.saveforgreen.datastructures.valueobject;
 
 public class ValueObjects {
 
@@ -6,7 +6,7 @@ public class ValueObjects {
 		public int val;
 		public TreeNode left;
 		public TreeNode right;
-		
+
 		public TreeNode(int valParam) {
 			this.val = valParam;
 		}
@@ -15,10 +15,10 @@ public class ValueObjects {
 		public String toString() {
 			return "TreeNode [val=" + val + ", left=" + left + ", right=" + right + "]";
 		}
-		
-		
-		
+
+
+
 	}
-	
+
 }
 

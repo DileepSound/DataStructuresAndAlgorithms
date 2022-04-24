@@ -27,7 +27,7 @@ public class FindMiddleNodeSLL {
 			System.out.println("slow=" + slow.val + ", fast="+fast.val);
 			slow = slow.next;
 			fast = fast.next.next;
-			
+
 		}
 		return slow;
 	}
